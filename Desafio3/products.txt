@@ -1,0 +1,26 @@
+[
+    {
+        "title": "producto 1",
+        "price": 123.45,
+        "thumbnail": "url",
+        "id": 1 
+    }
+    {
+        "title": "producto 2",
+        "price": 987.06,
+        "thumbnail": "url",
+        "id": 2
+    }
+    {
+        "title": "producto 3",
+        "price": 45.2,
+        "thumbnail": "url",
+        "id": 3
+    }
+    {
+        "title": "producto 4",
+        "price": 234.56,
+        "thumbnail": "url",
+        "id": 4
+    }
+]
