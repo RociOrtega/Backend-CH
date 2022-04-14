@@ -5,6 +5,7 @@ const app = express()
 const ProductsFromApi = require('./api/products.js')
 const productsFromApi = new ProductsFromApi()
 
+
 app.engine(
   'hbs',
   handlebars({
@@ -21,7 +22,7 @@ app.set('views', './views')
 app.get('/products', (req, res) => {
   const totalProducts = productsFromApi.getAll()
   const thereIsProducts = totalProducts.length > 0 ? true : false
-  const thereIsNoProducts = totalProducts.length > 0 ? false : true
+  const thereIsNoProducts = !totalProducts
   res.render('main', { 
     totalProducts: totalProducts, 
     productsExists: thereIsProducts,
@@ -29,10 +30,14 @@ app.get('/products', (req, res) => {
     title: 'Vista de productos'
   })
 })
-/*app.post('/', (req, res) => {
+
+app.post('/products', (req, res) => {
   const newProduct = productsFromApi.save(req.body)
-  res.render('main', { newProduct: newProduct, productsExists: true })
-})*/
+  res.render('main', { 
+    newProduct: newProduct,
+    title: 'Ingrese producto'
+  })
+})
 
 const PORT = 8080
 const server = app.listen(PORT, () => {

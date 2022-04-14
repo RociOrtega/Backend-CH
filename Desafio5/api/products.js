@@ -3,7 +3,30 @@ class Container{
   constructor(){
     this.id = 0;
     this.products = [
-      
+      {
+        "id": 1,
+        "name": "Producto 1",
+        "price": 123.45,
+        "image": "url",
+      },
+      {
+        "id": 2,
+        "name": "Producto 2",
+        "price": 567.89,
+        "image": "url"
+      },
+      {
+        "id": 3,
+        "name": "Producto 3",
+        "price": 987.65,
+        "image": "url",
+      },
+      {
+        "id": 4,
+        "name": "Producto 4",
+        "price": 543.21,
+        "image": "url",
+      }
     ];
   }
   getAll(){
