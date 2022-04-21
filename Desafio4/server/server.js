@@ -7,7 +7,7 @@ app.use('/api/products', productsRouter);
 app.use(express.static('../public'));
 
 const ProductsFromApi = require('../api/products.js');
-const productsFromApi = new ProductsFromApi();
+const productsFromApi = new ProductsFromApi(); 
 
 const productsRouter = new Router();
 productsRouter.use(express.json());
