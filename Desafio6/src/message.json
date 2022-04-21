@@ -1,0 +1,27 @@
+[
+  {
+    "userName": "Persona 1",
+    "date": "20/03/2022 23:10:51",
+    "message": "Hola, soy una persona"
+  },
+  {
+    "userName": "Persona 2",
+    "date": "31/03/2022 23:11:15",
+    "message": "Hola, cómo estás"
+  },
+  {
+    "userName": "Persona 3",
+    "date": "08/04/2022 06:11:53",
+    "message": "123456789"
+  },
+  {
+    "userName": "Persona 4",
+    "date": "15/04/2022 12:41:28",
+    "message": "texto de prueba"
+  },
+  {
+    "userName": "Persona 5",
+    "date": "02/05/2022 15:41:45",
+    "message": "1A2B3C4D5E6F7G8H9I0J"
+  }
+]

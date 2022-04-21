@@ -10,7 +10,7 @@ function addProduct(e){
   const product = {
     title: document.getElementById("name").value,
     price: document.getElementById("price").value,
-    image: document.getElementById("image").value
+    thumbnail: document.getElementById("image").value
   }
   socket.emit("new-product", product)
   document.getElementById("addProductByForm").reset()
