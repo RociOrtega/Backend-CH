@@ -1,0 +1,25 @@
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
+    title='Vista Productos'
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous")
+
+  body
+    div(class="jumbotron")
+      h1='Vista Productos'
+      if thereIsProducts
+        div(class="table-responsive")
+          table(class="table table-dark")
+            tr
+              th='Nombre'
+              th='Precio'
+              th='Imagen'
+            each product in products
+              tr
+                td=product.name
+                td=product.price
+                td
+                  img(width="50" src=product.image alt="Foto no encontrada")
+        else
+          h3(class="alert alert-warning")='No se encontraron productos'
+          a(href="/" type="button" class="btn btn-primary")='Cargar nuevo producto'

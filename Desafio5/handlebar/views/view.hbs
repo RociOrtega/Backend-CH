@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1>Vista de Productos</h1>
+  {{#if thereIsProducts}}
+    <div class="table-responsive">
+      <table class="table table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+        </tr>
+        {{#each products}}
+          <tr>
+            <td>{{this.name}}</td>
+            <td>${{this.price}}</td>
+            <td>
+              <img width="50" src={{this.image}} alt="">
+            </td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  {{else}}
+    <h3 class="alert alert-warning">No se encontraron productos</h3>
+    {{/if}}
+    <a href="/" type="button" class="btn btn-primary">Cargar nuevo producto</a>

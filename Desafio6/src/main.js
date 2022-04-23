@@ -19,14 +19,14 @@ app.get("/", (req, res) => {
 })
 socketIo.on("connection", async socket => {
   console.log("New client connected")
-  const products = await productsApi.getAll().then(products => products)
+  const products = await productsApi.getAll()
   socket.emit("products", products)
   socket.on("new-product", async product => {
     await productsApi.save(product)
-    const products = await productsApi.getAll().then(products => products)
+    const products = await productsApi.getAll()
     socketIo.socket.emit("products", products)
   })
-  const messages = await messagesApi.getAll().then(messages => messages)
+  const messages = await messagesApi.getAll()
   socket.emit("messages", messages)
   socket.on("new-message", async message => {
     await messagesApi.save(message)
